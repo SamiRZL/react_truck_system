@@ -25,7 +25,7 @@ export const TypeIcon = ({ type }) => {
 export default function SideBar({ routeData, loadingComponent, errorComponent, setSelectedStop }) {
     const LoadingSkeleton = () => (
         <div className="animate-pulse w-full space-y-4">
-            <div className="h-8 bg-gray-700 rounded w-1/3"></div>
+            <div className="h-8 bg-gray-700 rounded w-2/3"></div>
             <div className="bg-[#1b1e27] border border-gray-700 rounded-lg p-4 space-y-3">
                 <div className="h-4 bg-gray-700 rounded w-1/2"></div>
                 <div className="flex justify-between mt-3">
@@ -43,21 +43,29 @@ export default function SideBar({ routeData, loadingComponent, errorComponent, s
                 <div className="h-14 bg-gray-700 rounded"></div>
                 <div className="h-14 bg-gray-700 rounded"></div>
             </div>
+            <div className="bg-[#1b1e27] border border-gray-700 rounded-lg p-4 space-y-3">
+                <div className="h-4 bg-gray-700 rounded w-1/2"></div>
+                <div className="flex justify-between mt-3">
+                    <div className="h-5 bg-gray-700 rounded w-1/4"></div>
+                    <div className="h-5 bg-gray-700 rounded w-1/4"></div>
+                </div>
+                <div className="flex justify-between mt-3">
+                    <div className="h-5 bg-gray-700 rounded w-1/4"></div>
+                    <div className="h-5 bg-gray-700 rounded w-1/4"></div>
+                </div>
+            </div>
         </div>
     );
 
     if (!routeData && !loadingComponent && !errorComponent) {
         return (
-            <div className="w-full md:w-90 text-white h-auto p-5 border border-gray-700 rounded-lg bg-[#111117] flex flex-col gap-4">
-                <h1 className="text-3xl font-semibold">Route Details</h1>
-            </div>
+            <div></div>
         );
     }
 
     if (loadingComponent) {
         return (
             <div className="w-full md:w-90 text-white h-auto p-5 border border-gray-700 rounded-lg bg-[#111117] flex flex-col gap-4">
-                <h1 className="text-3xl font-semibold">Route Details</h1>
                 <LoadingSkeleton />
             </div>
         );
