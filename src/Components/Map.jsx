@@ -115,6 +115,7 @@ export default function Map({ loadingComponent, errorComponent, routeData, marke
                     center={defaultCenter}
                     zoom={defaultZoom}
                     onLoad={(map) => (mapRef.current = map)}
+                    onClick={() => setSelectedStop(null)}
                     options={{
                         //  gestureHandling: "greedy", 
                     }}
