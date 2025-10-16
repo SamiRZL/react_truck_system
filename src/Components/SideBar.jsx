@@ -84,8 +84,8 @@ export default function SideBar({ routeData, loadingComponent, errorComponent, s
                         <span className="text-xs text-gray-400">Total miles</span>
                     </div>
                     <div className="flex py-2 pl-3 w-1/2 flex-col items-start">
-                        <p className="text-md font-semibold">{routeData?.summary?.predicted_driving_time ?? "-"}</p>
-                        <span className="text-xs text-gray-400">Predicted trip time</span>
+                        <p className="text-md font-semibold">{routeData?.summary?.predicted_driving_time ?? "-"} hrs</p>
+                        <span className="text-xs text-gray-400">Predicted driving time</span>
                     </div>
                 </div>
                 <div className="flex w-full py-2 items-center justify-between divide-x divide-white/50 mt-2">
@@ -95,7 +95,7 @@ export default function SideBar({ routeData, loadingComponent, errorComponent, s
                     </div>
                     <div className="flex py-2 pl-3 w-1/2 flex-col items-start">
                         <p className="text-md font-semibold">{formatMonth(routeData?.summary?.total_estimated_arrival)}</p>
-                        <span className="text-xs text-gray-400">Estimated arrival</span>
+                        <span className="text-xs text-gray-400">Estimated arrival with stops</span>
                     </div>
                 </div>
             </div>
