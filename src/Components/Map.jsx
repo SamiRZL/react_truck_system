@@ -116,7 +116,7 @@ export default function Map({ loadingComponent, errorComponent, routeData, marke
                     zoom={defaultZoom}
                     onLoad={(map) => (mapRef.current = map)}
                     options={{
-                        gestureHandling: "greedy", // 👈 allows scroll zoom directly
+                        //  gestureHandling: "greedy", 
                     }}
                 >
                     {/* Draw route if available */}
